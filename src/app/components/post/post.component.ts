@@ -1,0 +1,22 @@
+import {Component, Input, OnInit} from '@angular/core';
+import {PostInterface} from "../../interfaces";
+
+@Component({
+  selector: 'app-post',
+  templateUrl: './post.component.html',
+  styleUrls: ['./post.component.css']
+})
+export class PostComponent implements OnInit{
+
+  @Input()
+  post:PostInterface
+  isShow=false
+  constructor() {
+  }
+  ngOnInit(): void {
+  }
+
+  showOrHide():void {
+    this.isShow=!this.isShow;
+  }
+}

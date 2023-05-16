@@ -1,0 +1,6 @@
+<div>id: {{post.id}}</div>
+<div>title: {{post.title}}</div>
+
+<button (click)="showOrHide()">{{isShow ? 'Hide' : 'Show'}}</button>
+
+<app-post-details *ngIf="isShow" [post]="post"></app-post-details>
