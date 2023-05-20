@@ -1,0 +1,10 @@
+<router-outlet></router-outlet>
+<div *ngIf="post">
+  {{post.userId}}
+  <br>
+  {{post.body}}
+  <hr>
+</div>
+
+<app-post *ngFor="let post of posts" [post]="post" (selectedPost)="getPost($event)"></app-post>
+
